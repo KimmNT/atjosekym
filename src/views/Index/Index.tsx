@@ -1,21 +1,15 @@
-import { useState } from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import styles from "./Index.module.scss";
 
 export default function Index() {
-  const [count, setCount] = useState(0);
-
-  const handleIncrease = () => {
-    setCount(count + 1);
-  };
-  const handleDecrease = () => {
-    setCount(count - 1);
-  };
-
   return (
-    <div>
-      <h1>Homepage</h1>
-      <button onClick={handleIncrease}>-</button>
-      <p>{count}</p>
-      <button onClick={handleDecrease}>+</button>
-    </div>
+    <>
+      <Navbar />
+      <main className={styles.Page}>
+        <section className={styles.PageContent}>
+          <h1>Hi, I'm Jose Kim</h1>
+        </section>
+      </main>
+    </>
   );
 }
